@@ -6,6 +6,11 @@
 
 <script setup lang="ts">
 import WindowsExplorer from '~/src/layouts/WindowsExplorer.vue';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  document.title = 'Dzikri Windows Explorer';
+});
 </script>
 
 <style scoped>

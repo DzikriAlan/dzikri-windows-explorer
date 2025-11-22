@@ -29,7 +29,6 @@ const selectedFolderId = ref<string | undefined>(undefined)
 
 const handleFolderSelected = (folderId: string) => {
   selectedFolderId.value = folderId
-  console.log('Selected folder ID:', folderId)
 }
 </script>
 

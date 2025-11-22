@@ -120,7 +120,6 @@ const loadFolderContents = async (folderId: string) => {
 };
 
 const handleItemClick = (item: FolderItem) => {
-  console.log(item)
   if (item.isFolder) {
     loadFolderContents(item.id)
   }
