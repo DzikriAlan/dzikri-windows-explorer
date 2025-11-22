@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background-color: #f0f0f0;
+}
+
+.explorer-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.windows-explorer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+}
+
+.explorer-header {
+  background: #0078d4;
+  color: white;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.explorer-header h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.explorer-main {
+  flex: 1;
+  overflow: hidden;
+}
+
+.explorer-content {
+  height: 100%;
+}
+
+.panels {
+  display: flex;
+  height: 100%;
+}
+
+.panel {
+  border-right: 1px solid #ddd;
+}
+
+.left-panel {
+  width: 300px;
+  min-width: 200px;
+  background: white;
+}
+
+.right-panel {
+  flex: 1;
+  background: white;
+}

@@ -1,0 +1,52 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "npm run db:generate && nuxt dev",
+    "dev:no-check": "nuxt dev --no-fork-ts-checker",
+    "type-check": "vue-tsc --noEmit",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push --accept-data-loss",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:setup": "prisma generate && prisma db push && npm run db:seed",
+    "db:reset": "prisma migrate reset --force",
+    "db:clean": "rm -rf node_modules/.prisma && rm -rf node_modules/@prisma/client",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^1.13.0",
+    "@nuxt/ui": "^3.1.2",
+    "@pinia/nuxt": "^0.5.1",
+    "@prisma/client": "5.8.1",
+    "@vueuse/core": "^13.2.0",
+    "@vueuse/nuxt": "^13.2.0",
+    "bcryptjs": "^3.0.2",
+    "dayjs": "^1.11.13",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.1",
+    "nuxt": "^3.17.4",
+    "pinia": "^2.1.7",
+    "vue": "^3.5.14",
+    "vue-router": "^4.5.1",
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vue/typescript-plugin": "^2.2.10",
+    "prisma": "5.8.1",
+    "sass": "^1.89.0",
+    "sass-loader": "^16.0.5",
+    "tsx": "^4.6.0",
+    "typescript": "^5.3.2",
+    "vue-tsc": "^1.8.25"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}

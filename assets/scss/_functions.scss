@@ -1,0 +1,14 @@
+@use "sass:color";
+
+// Modern SCSS color functions
+@function lighten-color($color, $amount) {
+  @return color.scale($color, $lightness: $amount);
+}
+
+@function darken-color($color, $amount) {
+  @return color.scale($color, $lightness: -$amount);
+}
+
+@function adjust-color-lightness($color, $amount) {
+  @return color.adjust($color, $lightness: $amount);
+}

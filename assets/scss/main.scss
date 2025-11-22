@@ -1,0 +1,31 @@
+@use "tailwindcss";
+@use "@nuxt/ui";
+
+// Global styles
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  @include mix.button-base;
+  background-color: vars.$primary-color;
+  color: white;
+
+  &:hover {
+    background-color: functions.darken-color(vars.$primary-color, 10%);
+  }
+
+  &:disabled {
+    background-color: functions.lighten-color(vars.$primary-color, 20%);
+    cursor: not-allowed;
+  }
+}
+
+.card {
+  @include mix.card-shadow;
+  background-color: white;
+  border-radius: vars.$border-radius-lg;
+  padding: vars.$spacing-lg;
+  border: 1px solid #e5e7eb;
+}
